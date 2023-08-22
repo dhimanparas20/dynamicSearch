@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body%}
+
+<div id="results"></div>
+<p id="message"></p>
+
+<div id="page-selector-container">
+    <div id="page-selector" class="btn-group" role="group">
+        <button type="button" class="page-button btn btn-dark" data-page="1">1</button>
+        <button type="button" class="page-button btn btn-dark" data-page="2">2</button>
+        <button type="button" class="page-button btn btn-dark" data-page="3">3</button>
+        <button type="button" class="page-button btn btn-dark" data-page="4">4</button>
+        <button type="button" class="page-button btn btn-dark" data-page="5">5</button>
+        <input class="buttonNumber" type="number" placeholder="Pg. No.">
+    </div>
+</div>
+<hr>
+
+{% endblock %}

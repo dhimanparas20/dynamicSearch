@@ -1,0 +1,142 @@
+/*Main Body*/
+#body {
+    background-color: #1a1a1a;
+    /*background-image: linear-gradient(to right, #c2c1c1, #242424);  */
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container that dynamically changes data*/
+#results {
+    background-color: #1a1a1a;
+    /*background-image: url("/static/back.jpg"); */
+    border-radius: 20px;
+    background-color: #1a1a1a;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: max-content;
+    padding: 30px;
+}
+
+
+/* Each movie Card*/
+.moviecard {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 5px;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 900px;
+}
+
+/* Download button per card*/
+.moreinfo {
+    position: fixed;
+    bottom: 10px;
+    /* Adjust as needed to control the distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Contains the page number Selector*/
+.moviecard img {
+    border-radius: 20px;
+    max-width: 100%;
+    max-height: 40%;
+    margin-bottom: 20px;
+}
+
+/* Message below the Main Container*/
+#message {
+    background-color: #1a1a1a;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 55px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+/* Contains the page number Selector*/
+#page-selector-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#page-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* input bar to take in page number*/
+.buttonNumber {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 15%;
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 768px) {
+    #searchBox {
+        height: 60px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #searchBox {
+        height: 50px;
+    }
+}
+
+@media (min-width: 1025px) {
+    #searchBox {
+        height: 60px;
+    }
+}
+
+/* Add hover effect to the poster image */
+.moviecard {
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition on transform property */
+}
+
+.moviecard:hover {
+    transform: scale(1.1);
+    /* Enlarge the image on hover */
+}
+
+/*Bottom Footer*/
+.sticky-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
