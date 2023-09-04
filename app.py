@@ -7,6 +7,7 @@ system("clear")
 with open('config.json') as json_file:
   data = json.load(json_file)
 APIvalue = data["API"]  
+Adult = data["ADULT"]
 
 app = Flask(__name__)
 api = Api(app) 
@@ -17,7 +18,7 @@ class Home(Resource):
 
 class getAPi(Resource):
     def get(self):
-        data  = {"API":APIvalue}
+        data  = {"API":APIvalue,"ADULT":Adult}
         return jsonify(data)
 
 api.add_resource(Home, '/')

@@ -1,3 +1,4 @@
+var useadult = false;
 var apiURL, home, currentPage = 1,
     pageFor = "home",
     searchTerm = "",
@@ -102,7 +103,7 @@ async function performSearch(name, page = 1) {     //Fetch Specific Query
         }
     };
     await $.ajax({
-        url: `https://api.themoviedb.org/3/search/multi?query=${name}&include_adult=true&language=en-US&page=${page}`,
+        url: `https://api.themoviedb.org/3/search/multi?query=${name}&include_adult=${useadult}&language=en-US&page=${page}`,
         method: 'GET',
         headers: options.headers,
         dataType: 'json',
@@ -180,6 +181,7 @@ function fetchAPIValueSync() {                  //Get API Value
         if (request.status === 200) {
             const data = JSON.parse(request.responseText);
             const APIValue = data.API;
+            useadult  = data.ADULT;
             return APIValue;
         } else {
             throw new Error("Request failed with status " + request.status);
