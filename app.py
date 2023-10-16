@@ -25,4 +25,4 @@ api.add_resource(Home, '/')
 api.add_resource(getAPi, '/getapi/')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False,port=5000,host='0.0.0.0',threaded=True)
